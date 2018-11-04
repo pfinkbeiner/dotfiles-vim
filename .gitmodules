@@ -13,3 +13,6 @@
 [submodule "bundle/emmet-vim"]
 	path = bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "bundle/commentary"]
+	path = bundle/commentary
+	url = https://tpope.io/vim/commentary.git
