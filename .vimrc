@@ -41,7 +41,9 @@ autocmd FileType javascript set tabstop=2 softtabstop=2 shiftwidth=2 expandtab t
 autocmd FileType coffee set tabstop=2 shiftwidth=2 number expandtab
 
 " editorconfig
-let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+let g:EditorConfig_core_mode = 'external_command'
+let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
 
 " Indent guides
 let g:indent_guides_enable_on_vim_startup = 1
