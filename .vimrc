@@ -45,7 +45,9 @@ autocmd FileType javascript set tabstop=2 softtabstop=2 shiftwidth=2 expandtab t
 autocmd FileType coffee set tabstop=2 shiftwidth=2 number expandtab
 
 " vue
-autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
+let g:vue_disable_pre_processors=1
+autocmd FileType vue syntax sync fromstart
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.coffee.scss
 
 " editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
@@ -55,7 +57,8 @@ let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
 " Indent guides
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
-hi IndentGuidesOdd  ctermbg=black
+let g:indent_guides_guide_size = 1
+let g:indent_guides_auto_colors = 0
 hi IndentGuidesEven ctermbg=darkgrey
 
 " Remove trailing whitespace on save
