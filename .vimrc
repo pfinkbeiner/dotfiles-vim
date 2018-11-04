@@ -44,6 +44,9 @@ autocmd FileType php set tabstop=4 softtabstop=4 shiftwidth=4 expandtab textwidt
 autocmd FileType javascript set tabstop=2 softtabstop=2 shiftwidth=2 expandtab textwidth=0 number
 autocmd FileType coffee set tabstop=2 shiftwidth=2 number expandtab
 
+" vue
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
+
 " editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 let g:EditorConfig_core_mode = 'external_command'
