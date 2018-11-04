@@ -12,6 +12,10 @@ set hlsearch
 set noerrorbells 
 set novisualbell
 
+" Save on SHIFT+W
+cabb W w
+cabb Q q
+
 autocmd BufRead,BufNewFile setup.ts set ft=typoscript
 autocmd BufRead,BufNewFile constants.ts set ft=typoscript
 autocmd BufRead,BufNewFile setup.txt set ft=typoscript
