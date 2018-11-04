@@ -1,4 +1,5 @@
 execute pathogen#infect()
+
 syntax on
 let g:solarized_termcolors=256
 set background=dark
@@ -11,6 +12,11 @@ set hlsearch
 set noerrorbells 
 set novisualbell
 
+" Indent guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+hi IndentGuidesOdd  ctermbg=black
+hi IndentGuidesEven ctermbg=darkgrey
 
 autocmd BufRead,BufNewFile setup.ts set ft=typoscript
 autocmd BufRead,BufNewFile constants.ts set ft=typoscript
