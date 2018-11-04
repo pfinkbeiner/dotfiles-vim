@@ -31,3 +31,6 @@
 [submodule "bundle/editorconfig-vim"]
 	path = bundle/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "bundle/vim-searchindex"]
+	path = bundle/vim-searchindex
+	url = https://github.com/google/vim-searchindex.git
