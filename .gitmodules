@@ -16,3 +16,6 @@
 [submodule "bundle/commentary"]
 	path = bundle/commentary
 	url = https://tpope.io/vim/commentary.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab
