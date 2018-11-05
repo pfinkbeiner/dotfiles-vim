@@ -46,3 +46,6 @@
 [submodule "bundle/MatchTagAlways"]
 	path = bundle/MatchTagAlways
 	url = https://github.com/Valloric/MatchTagAlways.git
+[submodule "bundle/smyck-vim"]
+	path = bundle/smyck-vim
+	url = https://github.com/brendonrapp/smyck-vim.git
