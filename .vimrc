@@ -9,13 +9,22 @@ filetype plugin indent on
 set incsearch
 set encoding=utf-8
 set hlsearch
-set noerrorbells 
+set noerrorbells
 set novisualbell
 
 " Save on SHIFT+W
 cabb W w
 cabb Q q
 
+" Remove trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
+
+autocmd BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+autocmd BufRead,BufNewFile *.json set ft=javascript tabstop=2 shiftwidth=2 number expandtab
+autocmd BufRead,BufNewFile *.html set ft=xml
+autocmd BufRead,BufNewFile *.hbs set ft=mustache
+autocmd BufRead,BufNewFile *.handlebars set ft=mustache
+autocmd BufRead,BufNewFile *.typoscript set ft=typoscript
 autocmd BufRead,BufNewFile setup.ts set ft=typoscript
 autocmd BufRead,BufNewFile constants.ts set ft=typoscript
 autocmd BufRead,BufNewFile setup.txt set ft=typoscript
@@ -61,11 +70,16 @@ let g:indent_guides_guide_size = 1
 let g:indent_guides_auto_colors = 0
 "hi IndentGuidesEven ctermbg=darkgrey
 
-" Remove trailing whitespace on save
-autocmd BufWritePre *.py :%s/\s\+$//e
 
 " nerdtree
-map <C-n> :NERDTreeToggle<CR>
+function! NERDTreeToggleInCurDir()
+  exe ":NERDTreeToggle"
+  exe ":NERDTreeCWD"
+endfunction
+map <C-n> :call NERDTreeToggleInCurDir()<CR>
+
+" nnoremap <leader>nf :NERDTreeFind<cr>
+nnoremap <leader>nf :call NERDTreeToggleInCurDir()<cr>
 
 " gundo
 nnoremap <C-G> :GundoToggle<CR>
