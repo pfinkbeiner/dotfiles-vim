@@ -16,8 +16,12 @@ set novisualbell
 cabb W w
 cabb Q q
 
+" SWAP files
+set directory=~/.vim/swap
+
 " Remove trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
+au BufNewFile,BufReadPost,FilterReadPost,FileReadPost  * set nospell
 
 autocmd BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 autocmd BufRead,BufNewFile *.json set ft=javascript tabstop=2 shiftwidth=2 number expandtab
