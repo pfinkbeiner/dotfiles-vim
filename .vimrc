@@ -11,6 +11,8 @@ set encoding=utf-8
 set hlsearch
 set noerrorbells
 set novisualbell
+set nobackup
+set nowritebackup
 
 " Save on SHIFT+W
 cabb W w
@@ -52,15 +54,35 @@ autocmd FileType yaml set softtabstop=2 shiftwidth=2 expandtab number
 autocmd FileType typoscript set tabstop=2 textwidth=0 shiftwidth=2 softtabstop=2 number noexpandtab
 autocmd FileType markdown set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab textwidth=0 number
 autocmd FileType erlang set tabstop=4 softtabstop=4 shiftwidth=4 expandtab textwidth=0 number
-autocmd FileType elixir set number
+autocmd FileType elixir set number formatprg="mix\ format\ -"
 autocmd FileType php set tabstop=4 softtabstop=4 shiftwidth=4 expandtab textwidth=0 number
 autocmd FileType javascript set tabstop=2 softtabstop=2 shiftwidth=2 expandtab textwidth=0 number
 autocmd FileType coffee set tabstop=2 shiftwidth=2 number expandtab
+autocmd BufNewFile,BufRead *.ejs set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab tw=0 number filetype=html
 
 " vue
-let g:vue_disable_pre_processors=1
+"let g:vue_disable_pre_processors=1
+"autocmd FileType vue syntax sync fromstart
+"autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.coffee.scss
+" autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css (rausnehmen falls vorhanden)
 autocmd FileType vue syntax sync fromstart
-autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.coffee.scss
+autocmd FileType vue set nu
+let g:vue_disable_pre_processors = 1
+let g:syntastic_mode_map = { 'mode': 'active',
+      \ 'active_filetypes': [
+          \ 'ruby',
+          \ 'javascript',
+          \ 'json',
+          \ 'scss'
+      \ ],
+      \ 'passive_filetypes': [
+          \ 'puppet',
+          \ 'php',
+          \ 'sh',
+          \ 'xml',
+          \ 'vue'
+      \ ]
+  \ }
 
 " editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
@@ -88,6 +110,12 @@ nnoremap <leader>nf :call NERDTreeToggleInCurDir()<cr>
 " gundo
 nnoremap <C-G> :GundoToggle<CR>
 
+" Disable arrow keys
+"noremap <Up> <NOP>
+"noremap <Down> <NOP>
+"noremap <Left> <NOP>
+"noremap <Right> <NOP>
+
 " Autoreload .vimrc
 augroup myvimrc
     au!
@@ -103,6 +131,6 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_working_path_mode = 'ra'
 " let g:ctrlp_custom_ignore = '\v\(\.git|node_modules|bower_components\)$'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v\(\.git|.hg|.svn|node_modules|bower_components\)$',
+  \ 'dir':  '\v[\/]\.(git|hg|svn)|node_modules|webpagetest|bower_components|_build|deps$',
   \ 'file': '\.beam$\'
   \ }
