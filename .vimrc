@@ -60,14 +60,10 @@ autocmd FileType javascript set tabstop=2 softtabstop=2 shiftwidth=2 expandtab t
 autocmd FileType coffee set tabstop=2 shiftwidth=2 number expandtab
 autocmd BufNewFile,BufRead *.ejs set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab tw=0 number filetype=html
 
-" vue
-"let g:vue_disable_pre_processors=1
+"autocmd BufRead,BufNewFile *.vue setlocal filetype=vue
 "autocmd FileType vue syntax sync fromstart
-"autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.coffee.scss
-" autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css (rausnehmen falls vorhanden)
-autocmd FileType vue syntax sync fromstart
-autocmd FileType vue set nu
-let g:vue_disable_pre_processors = 1
+"autocmd FileType vue set nu
+
 let g:syntastic_mode_map = { 'mode': 'active',
       \ 'active_filetypes': [
           \ 'ruby',
@@ -79,8 +75,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
           \ 'puppet',
           \ 'php',
           \ 'sh',
-          \ 'xml',
-          \ 'vue'
+          \ 'xml'
       \ ]
   \ }
 
@@ -134,3 +129,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)|node_modules|webpagetest|bower_components|_build|deps$',
   \ 'file': '\.beam$\'
   \ }
+
+let g:vim_vue_plugin_use_coffee = 1
+let g:vim_vue_plugin_use_sass = 1
+let g:vim_vue_plugin_highlight_vue_attr = 1
