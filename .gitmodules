@@ -52,3 +52,6 @@
 [submodule "bundle/vim-pug"]
 	path = bundle/vim-pug
 	url = https://github.com/digitaltoad/vim-pug.git
+[submodule "bundle/vim-elixir"]
+	path = bundle/vim-elixir
+	url = https://github.com/elixir-lang/vim-elixir.git
