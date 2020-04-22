@@ -61,3 +61,9 @@
 [submodule "bundle/scss-syntax"]
 	path = bundle/scss-syntax
 	url = https://github.com/cakebaker/scss-syntax.vim
+[submodule "bundle/vim-jsx-pretty"]
+	path = bundle/vim-jsx-pretty
+	url = https://github.com/MaxMEllon/vim-jsx-pretty.git
+[submodule "bundle/vim-mjml"]
+	path = bundle/vim-mjml
+	url = https://github.com/amadeus/vim-mjml.git
