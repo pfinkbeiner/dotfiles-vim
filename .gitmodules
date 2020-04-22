@@ -67,3 +67,6 @@
 [submodule "bundle/vim-mjml"]
 	path = bundle/vim-mjml
 	url = https://github.com/amadeus/vim-mjml.git
+[submodule "bundle/vim-mix-format"]
+	path = bundle/vim-mix-format
+	url = https://github.com/mhinz/vim-mix-format.git

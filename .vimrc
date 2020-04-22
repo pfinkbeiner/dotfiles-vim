@@ -130,6 +130,8 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.beam$\'
   \ }
 
+let g:mix_format_on_save = 1
+
 "let g:vim_vue_plugin_highlight_vue_attr = 1
 "let g:vim_vue_plugin_load_full_syntax = 1
 "let g:vim_vue_plugin_use_coffee = 1
