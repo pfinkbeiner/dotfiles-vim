@@ -61,6 +61,31 @@ autocmd FileType coffee set tabstop=2 shiftwidth=2 number expandtab
 autocmd BufNewFile,BufRead *.ejs set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab tw=0 number filetype=html
 
 
+autocmd FileType vue set number
+
+let g:vim_vue_plugin_load_full_syntax = 0
+let g:vim_vue_plugin_use_sass = 1
+let g:vim_vue_plugin_use_scss = 1
+let g:vim_vue_plugin_use_coffee = 1
+let g:vim_vue_plugin_highlight_vue_attr  = 1
+let g:vim_vue_plugin_highlight_vue_keyword = 1
+
+" Example: set local options based on subtype
+function! OnChangeVueSubtype(subtype)
+  echom 'Subtype is '.a:subtype
+  if a:subtype == 'html'
+    setlocal commentstring=<!--%s-->
+    setlocal comments=s:<!--,m:\ \ \ \ ,e:-->
+  elseif a:subtype =~ 'css'
+    setlocal comments=s1:/*,mb:*,ex:*/ commentstring&
+  elseif a:subtype =~ 'coffee'
+    setlocal commentstring=#%s
+  else
+    setlocal commentstring=//%s
+    setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
+  endif
+endfunction
+
 let g:syntastic_mode_map = { 'mode': 'active',
       \ 'active_filetypes': [
           \ 'ruby',
