@@ -60,9 +60,6 @@ autocmd FileType javascript set tabstop=2 softtabstop=2 shiftwidth=2 expandtab t
 autocmd FileType coffee set tabstop=2 shiftwidth=2 number expandtab
 autocmd BufNewFile,BufRead *.ejs set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab tw=0 number filetype=html
 
-"autocmd BufRead,BufNewFile *.vue setlocal filetype=vue
-"autocmd FileType vue syntax sync fromstart
-"autocmd FileType vue set nu
 
 let g:syntastic_mode_map = { 'mode': 'active',
       \ 'active_filetypes': [
@@ -131,10 +128,3 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 let g:mix_format_on_save = 1
-
-"let g:vim_vue_plugin_highlight_vue_attr = 1
-"let g:vim_vue_plugin_load_full_syntax = 1
-"let g:vim_vue_plugin_use_coffee = 1
-"let g:vim_vue_plugin_use_sass = 1
-""let g:vim_vue_plugin_use_foldexpr = 1
-"let g:vim_vue_plugin_debug = 1
