@@ -76,3 +76,6 @@
 [submodule "bundle/vim-vue-plugin"]
 	path = bundle/vim-vue-plugin
 	url = https://github.com/leafOfTree/vim-vue-plugin
+[submodule "bundle/vim-typoscript"]
+	path = bundle/vim-typoscript
+	url = https://github.com/elmar-hinz/vim.typoscript.git
