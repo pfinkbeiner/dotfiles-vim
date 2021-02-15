@@ -51,7 +51,7 @@ autocmd FileType html set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab tw=0 
 autocmd FileType xml set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab textwidth=0 number
 autocmd FileType scss set softtabstop=2 shiftwidth=2 expandtab number
 autocmd FileType yaml set softtabstop=2 shiftwidth=2 expandtab number
-autocmd FileType typoscript set tabstop=2 textwidth=0 shiftwidth=2 softtabstop=2 number noexpandtab
+autocmd FileType typoscript set tabstop=2 textwidth=0 shiftwidth=2 softtabstop=2 number noexpandtab commentstring=#\ %s
 autocmd FileType markdown set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab textwidth=0 number
 autocmd FileType erlang set tabstop=4 softtabstop=4 shiftwidth=4 expandtab textwidth=0 number
 autocmd FileType elixir set number formatprg="mix\ format\ -"
