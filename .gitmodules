@@ -79,3 +79,15 @@
 [submodule "bundle/vim-typoscript"]
 	path = bundle/vim-typoscript
 	url = https://github.com/elmar-hinz/vim.typoscript.git
+[submodule "bundle/fzf"]
+	path = bundle/fzf
+	url = https://github.com/junegunn/fzf
+[submodule "bundle/phpactor"]
+	path = bundle/phpactor
+	url = https://github.com/phpactor/phpactor
+[submodule "bundle/typescript-vim"]
+	path = bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "bundle/vim-prettier"]
+	path = bundle/vim-prettier
+	url = https://github.com/prettier/vim-prettier
